@@ -13,4 +13,4 @@ So I modified the code slightly to show a closer resemblance to this arcade vers
 
 ## Gameplay
 
-Use the spacebar to try to stack the blocks to the top. You will start with 3 blocks but you will likely only have 1 block by the time you get to the top as the speed increases as the score increases. You can play the game here: https://neilwoodroffe.github.io/stacker/
+Use the spacebar, left mouse button or touch screen to try to stack the blocks to the top. You will start with 3 blocks but you will likely only have 1 block by the time you get to the top as the speed increases as the score increases. You can play the game here: https://neilwoodroffe.github.io/stacker/
