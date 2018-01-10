@@ -92,6 +92,40 @@ function keyPressed() {
 }
 
 /**
+ * added user input from left mouse press 
+ */
+function mousePressed() {
+  
+    var y = grid.length - 1; // height of the stack
+    var cellCount = grid[y].stop(grid[y - 1]); // how many cells are still stackable
+  
+    if (cellCount < 1) {
+      // no more stackable cells
+  
+      endGame();
+      return;
+    }
+  
+    frameRate(5 + score); // increase difficulty
+  
+    //if (++y > MID_HEIGHT) {
+      // too high to see new stacks
+      if (++y > HEIGHT) { //Changed to HEIGHT
+  
+      for (var i = 0; i < y; i++) {
+        // translate stack down
+  
+        grid[i].y--;
+      }
+    }
+  
+    score = y;
+  
+    //grid.push(new Row((y > MID_HEIGHT) ? MID_HEIGHT : y, cellCount)); // push new Row
+    grid.push(new Row((y > HEIGHT) ? HEIGHT : y, cellCount)); // push new Row
+  }
+
+/**
  * updates & draws Rows
  */
 function handleGrid() {
