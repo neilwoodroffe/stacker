@@ -92,7 +92,7 @@ function keyPressed() {
 }
 
 /**
- * added user input from left mouse press 
+ * added user input from left mouse button press or touch screen
  */
 function mousePressed() {
   
