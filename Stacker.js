@@ -91,10 +91,22 @@ function keyPressed() {
   grid.push(new Row((y > HEIGHT) ? HEIGHT : y, cellCount)); // push new Row
 }
 
+var released = true; //android support hack
+
+function mouseReleased(){
+	released = true;
+	return false;
+}
 /**
  * added user input from left mouse button press or touch screen
  */
 function mousePressed() {
+
+  if(!released){ //android support hack
+		return;
+	}
+	released = false;
+
   
     var y = grid.length - 1; // height of the stack
     var cellCount = grid[y].stop(grid[y - 1]); // how many cells are still stackable
